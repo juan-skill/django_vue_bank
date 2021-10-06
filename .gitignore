@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# database
+data/
+
+# docker
+Dockerfile
+docker-compose.yml
+Makefile
+
+# python dependencies
+requirements.txt
+
 # C extensions
 *.so
 
