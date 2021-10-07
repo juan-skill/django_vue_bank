@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY', default = 'xx8+5_or_d(tqa*3^b6gm&oap9w&0)n368dw(b67p8(3#njakd')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', default=False)
@@ -107,11 +107,11 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('POSTGRES_DB'),
-        'USER': env.str('POSTGRES_USER'),
-        'PASSWORD': env.str('POSTGRES_PASSWORD'),
-        'HOST': env.str('DB_HOST'),
-        'PORT': env.int('DB_PORT')
+        'NAME': env.str('POSTGRES_DB', default = 'postgres'),
+        'USER': env.str('POSTGRES_USER', default = 'postgres'),
+        'PASSWORD': env.str('POSTGRES_PASSWORD', default = 'postgres'),
+        'HOST': env.str('DB_HOST', default = '127.0.0.1'),
+        'PORT': env.int('DB_PORT', default = 5432),
     }
 }
 
@@ -153,3 +153,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+import django_heroku
+django_heroku.settings(locals())
