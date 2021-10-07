@@ -1,0 +1,11 @@
+{
+    "username": "fjgomezpe",
+    "password": "contraseña",
+    "name": "francisco",
+    "email": "fjgomezpe@misionTIC.com",
+    "account": {
+    "lastChangeDate": "2021-09-23T10:25:43.511Z",
+    "balance": 20000,
+    "isActive": true
+    }
+}
