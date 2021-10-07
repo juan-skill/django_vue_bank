@@ -12,7 +12,7 @@ docker-compose.yml
 Makefile
 
 # python dependencies
-requirements.txt
+requirements_local.txt
 
 # C extensions
 *.so
